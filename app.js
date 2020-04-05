@@ -7,6 +7,7 @@ const methodOverride = require('method-override');
 const flash = require('connect-flash');
 const port = 3000;
 const app = express();
+const uri = "mongodb+srv://yelpcamp:yelpqaz123@yelpcamp-fwbl5.mongodb.net/yelp_camp?retryWrites=true&w=majority";
 const User = require('./models/user');
 const seedDB = require('./seeds');
 const commentRoutes = require("./routes/comments");
@@ -14,7 +15,7 @@ const campgroundRoutes = require("./routes/campgrounds");
 const authRoutes = require("./routes/auth");
 
 
-mongoose.connect(/database url/);
+mongoose.connect(uri);
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
