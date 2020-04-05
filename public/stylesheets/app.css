@@ -1,0 +1,16 @@
+.card {
+    margin-bottom: 1.5em;
+}
+
+#comments-tab {
+    background-color:#e9ecef;
+    
+}
+
+div.comment {
+    padding: 0 25px;
+}
+
+.delete-button {
+    display: inline;
+}
