@@ -6,15 +6,15 @@ const LocalStrategy = require('passport-local');
 const methodOverride = require('method-override');
 const flash = require('connect-flash');
 const port = 3000;
-const app = express(); 
+const app = express();
 const User = require('./models/user');
 const seedDB = require('./seeds');
 const commentRoutes = require("./routes/comments");
 const campgroundRoutes = require("./routes/campgrounds");
 const authRoutes = require("./routes/auth");
 
-
-mongoose.connect("mongodb+srv://yelpcamp:yelpqaz123@yelpcamp-fwbl5.mongodb.net/yelp_camp?retryWrites=true&w=majority");
+var url = process.env.DATABASEURL || "mongodb+srv://yelpcamp:yelpqaz123@yelpcamp-fwbl5.mongodb.net/yelp_camp?retryWrites=true&w=majority";
+mongoose.connect(url);
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
