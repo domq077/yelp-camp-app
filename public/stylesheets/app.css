@@ -1,3 +1,20 @@
+.loginName {
+    padding-top: 8px;
+    text-align: center;
+}
+
+a.nav-link {
+    text-align: center;
+}
+
+header {
+    margin-top: 30px;
+}
+
+#campground, #register, #login {
+    margin-top: 30px;
+}
+
 .card {
     margin-bottom: 1.5em;
 }
@@ -14,3 +31,10 @@ div.comment {
 .delete-button {
     display: inline;
 }
+
+div.alert {
+    margin: 30px 15px;
+    padding: 10px 20px;
+}
+
+
